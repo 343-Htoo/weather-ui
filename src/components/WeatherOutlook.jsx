@@ -36,7 +36,7 @@ const WeatherOutlook = () => {
           <button
             key={week}
             onClick={() => setActiveWeek(week)}
-            className={`px-5 py-2 text-xs font-bold whitespace-nowrap border transition-all ${
+            className={`px-5 py-2 text-xs font-bold rounded-xl whitespace-nowrap border transition-all ${
               activeWeek === week
                 ? 'bg-blue-50 border-blue-500 text-blue-600 shadow-sm'
                 : 'bg-white border-slate-200 text-slate-400 hover:border-slate-300'
@@ -48,8 +48,8 @@ const WeatherOutlook = () => {
       </div>
 
       {/* Detail Content Section */}
-      <div className="space-y-4 border-l-4 border-slate-200 pl-6 py-1">
-        <div className="grid grid-cols-[100px_1fr] gap-y-3">
+      <div className="space-y-4 border-slate-200 pl-6 py-1">
+        <div className="grid grid-cols-[100px_1fr] border-l-4 border-slate-200 gap-y-3 p-2">
           <span className="text-sm font-bold text-slate-400 uppercase tracking-tight">Period</span>
           <span className="text-sm font-bold text-slate-700">01.26 ~ 02.01</span>
 

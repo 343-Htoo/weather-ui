@@ -9,3 +9,13 @@
     scrollbar-width: none !important; /* Firefox */
   }
 }
+
+/* Scrollbar ကို ဖျောက်ရန် */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

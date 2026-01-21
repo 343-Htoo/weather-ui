@@ -61,7 +61,7 @@ const HealthIndexComponent = () => {
         </button>
 
         {/* Scrollable Area */}
-        <div 
+        {/* <div 
           ref={scrollRef}
           className="overflow-x-auto no-scrollbar relative"
         >
@@ -80,7 +80,66 @@ const HealthIndexComponent = () => {
               </div>
             ))}
           </div>
+        </div> */}
+
+        <div 
+  ref={scrollRef}
+  className="overflow-x-auto no-scrollbar relative"
+>
+  <div className="flex flex-nowrap items-start space-x-4 md:space-x-12 min-w-max px-0 md:px-6"> 
+    {/* ရှေ့ကမေးခွန်းအတိုင်း mobile မှာ px-0 ဖြစ်အောင် ပြင်ထားပါတယ် */}
+    
+    {healthIndexes.map((item, idx) => (
+      <div key={idx} className="flex flex-col items-center space-y-3 md:space-y-5 w-20 md:w-32 shrink-0">
+        
+        {/* --- Circular Border Section --- */}
+        <div className="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20">
+          <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 100 100">
+            {/* အောက်ခံ အရောင်ဖျော့အဝိုင်း */}
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              fill="transparent"
+              stroke="currentColor"
+              strokeWidth="8"
+              className="text-gray-100" 
+            />
+            {/* အပေါ်က အရောင်တောက် Progress အပိုင်း (75% ပြထားတာပါ) */}
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              fill="transparent"
+              stroke="currentColor"
+              strokeWidth="8"
+              strokeDasharray="283"
+              strokeDashoffset="70" 
+              strokeLinecap="round"
+              className={`${item.color} transition-all duration-500`}
+            />
+          </svg>
+          
+          {/* အလယ်က မျက်နှာ (Icon သို့မဟုတ် Emoji) */}
+          <div className={`relative z-10 text-2xl md:text-3xl ${item.color}`}>
+             {/* ဒီနေရာမှာ သင့်ရဲ့ StatusFace icon ကို ထည့်ပါ */}
+             {item.face} 
+          </div>
         </div>
+        {/* --- End Circular Border --- */}
+
+        <div className="text-center w-full">
+          <p className={`text-[10px] md:text-sm font-black ${item.color} uppercase tracking-tight`}>
+            {item.status}
+          </p>
+          <p className="text-[9px] md:text-[13px] text-slate-500 mt-1 font-medium leading-tight">
+            {item.label}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* Right Arrow Button */}
         <button 
