@@ -46,24 +46,26 @@ const Body = () => {
         { time: "၈ နာရီ", icon: "🌙", temp: "-4°", rainProb: "0%", rainVol: "0", humidity: "75", wind: "1" },
         { time: "၉ နာရီ", icon: "🌙", temp: "-4°", rainProb: "0%", rainVol: "0", humidity: "80", wind: "1" },
         { time: "၁၀ နာရီ", icon: "🌙", temp: "-4°", rainProb: "0%", rainVol: "0", humidity: "80", wind: "1" },
+         { time: "၂၁ နာရီ", icon: "🌙", temp: "-3°", rainProb: "0%", rainVol: "0", humidity: "75", wind: "1" },
+        { time: "၂၂ နာရီ", icon: "🌙", temp: "-3°", rainProb: "0%", rainVol: "0", humidity: "75", wind: "2" },
+        { time: "၂၃ နာရီ", icon: "🌙", temp: "-3°", rainProb: "0%", rainVol: "0", humidity: "75", wind: "2" },
+        { time: "မနက်ဖြန်", icon: "🌙", temp: "-3°", rainProb: "0%", rainVol: "0", humidity: "75", wind: "2" },
+        { time: "၁ နာရီ", icon: "🌙", temp: "-3°", rainProb: "0%", rainVol: "0", humidity: "75", wind: "1" },
+        { time: "၂ နာရီ", icon: "🌙", temp: "-3°", rainProb: "0%", rainVol: "0", humidity: "75", wind: "1" },
+        { time: "၃ နာရီ", icon: "🌙", temp: "-4°", rainProb: "0%", rainVol: "0", humidity: "75", wind: "1" },
     ];
 
     return (
         <div className="bg-white min-h-screen">
             <main className="max-w-7xl mx-auto p-2 md:p-2 grid grid-cols-1 lg:grid-cols-3 ">
 
-
                 {/* ဘယ်ဘက်ခြမ်း Column */}
                 <div className="lg:col-span-2">
-                    {/* <div className="flex items-center space-x-2 mb-6">
-                        <span className="text-yellow-500 text-xl">★</span>
-                        <h2 className="text-xl md:text-2xl font-bold text-slate-900">{currentCity}</h2>
-                    </div> */}
-
+                   
                     <TemperatureToggleCard />
 
                     {/* Main Stats Row */}
-                    <div className="flex overflow-x-auto gap-3 pl-6 mb-8 pb-2 no-scrollbar">
+                    <div className="flex overflow-x-auto gap-3 pl-6 mb-6 pb-2 no-scrollbar">
                         {mainStats.map((item, index) => (
                             <div key={index} className="bg-white border border-black-50 rounded-sm p-2 text-center min-w-[110px] flex-shrink-0">
                                 <p className="text-[9px] text-gray-400 font-bold mb-1 uppercase">{item.label}</p>
@@ -93,7 +95,7 @@ const Body = () => {
                                         <div
                                             key={index}
                                             // Mobile မှာ ၅ ခု ပေါ်ရန် (100% - labels width) / 5 = roughly 18-20% 
-                                            className="flex flex-col items-center min-w-[20%] md:min-w-[80px] py-3 text-center border-r border-black-50"
+                                            className="flex flex-col items-center min-w-[20%] md:min-w-[50px] py-1 text-center border-r border-gray-200"
                                         >
                                             <span className="text-[10px] text-gray-400 font-bold mb-2">{hour.time}</span>
                                             <span className="text-lg mb-2">{hour.icon}</span>
@@ -105,7 +107,7 @@ const Body = () => {
                                             <span className="text-[10px] text-blue-400 font-bold h-8 flex items-center">{hour.humidity}%</span>
                                             <div className="flex flex-col items-center pt-2">
                                                 <span className="text-[10px] text-slate-600 font-bold">{hour.wind}</span>
-                                                <span className="text-blue-500 text-[7px]">▼</span>
+                                                <span className="text-blue-500 text-[10px]">▼</span>
                                             </div>
                                         </div>
                                     ))}
@@ -114,17 +116,18 @@ const Body = () => {
                                 <button onClick={() => scroll('right')} className="absolute right-0 top-1/2 -translate-y-1/2 z-40 bg-white/80 shadow-md rounded-full p-1 hidden group-hover:flex mr-4 border"><svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg></button>
                             </div>
                         </div>
-                        <div className="border-b border-black-100/50 py-5 m-0 md:mr-5"></div>
+                        <div className="border-b border-gray-400 py-2 m-0 md:mr-12 "></div>
                     </div>
                     <div>
                         
                         {/* Update အချိန်ကို ပြသခြင်း (Component ရဲ့ အောက်ခြေ သို့မဟုတ် ထိပ်ဆုံးမှာ ထည့်နိုင်သည်) */}
-                        <div className="text-[12px] text-gray-400 mb-4 mt-3 ml-3  p-4">
+                        <div className="text-[15px] text-gray-400 mb-4 mt-3 ml-3  p-3">
                             ၂၀၂၆.၀၁.၁၉. ၁၅:၅၆ တွင် နောက်ဆုံးပြင်ဆင်ခဲ့သည်
                         </div>
                     </div>
-                     <div className="border-0 md:border-b border-black-100/50 ml-6"></div>
+                     <div className="border-0 md:border-b border-gray-300 ml-6"></div>
                     <WeeklyForecast />
+                    <div className="border-0 md:border-b mt-4 border-gray-300 ml-6"></div>
                     <WeeklyWeatherComponent />
                 </div>
 

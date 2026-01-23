@@ -4,15 +4,15 @@ import React, { useState, useRef } from 'react';
 const WeeklyForecast = () => {
     const weeklyData = [
         { day: 'ယနေ့', date: '၁.၁၉.', morningIcon: '☁️', eveningIcon: '⛅', low: '-၄', high: '-၂', morningRain: '40%', eveningRain: '20%' },
-        { day: 'မနက်ဖြန်', date: '၁.၂၀.', morningIcon: '⛅', eveningIcon: '☀️', low: '-၁၄', high: '-၄', morningRain: '20%', eveningRain: '0%' },
-        { day: 'ဗုဒ္ဓဟူး', date: '၁.၂၁.', morningIcon: '☀️', eveningIcon: '☀️', low: '-၁၃', high: '-၆', morningRain: '0%', eveningRain: '10%' },
-        { day: 'ကြာသပတေး', date: '၁.၂၂.', morningIcon: '☀️', eveningIcon: '☀️', low: '-၁၃', high: '-၄', morningRain: '0%', eveningRain: '0%' },
-        { day: 'သောကြာ', date: '၁.၂၃.', morningIcon: '☀️', eveningIcon: '⛅', low: '-၁၀', high: '-၁', morningRain: '10%', eveningRain: '20%' },
+        { day: 'မနက်ဖြန်', date: '၁.၂၀.', morningIcon: '⛅', eveningIcon: '☀️', low: '-၁', high: '-၄', morningRain: '20%', eveningRain: '0%' },
+        { day: 'ဗုဒ္ဓဟူး', date: '၁.၂၁.', morningIcon: '☀️', eveningIcon: '☀️', low: '-၃', high: '-၆', morningRain: '0%', eveningRain: '10%' },
+        { day: 'ကြာသပတေး', date: '၁.၂၂.', morningIcon: '☀️', eveningIcon: '☀️', low: '-၁', high: '-၄', morningRain: '0%', eveningRain: '0%' },
+        { day: 'သောကြာ', date: '၁.၂၃.', morningIcon: '☀️', eveningIcon: '⛅', low: '-၁', high: '-၁', morningRain: '10%', eveningRain: '20%' },
         { day: 'စနေ', date: '၁.၂၄.', morningIcon: '⛅', eveningIcon: '⛅', low: '-၉', high: '-၂', morningRain: '20%', eveningRain: '20%' },
         { day: 'တနင်္ဂနွေ', date: '၁.၂၅.', morningIcon: '☀️', eveningIcon: '☀️', low: '-၉', high: '-၃', morningRain: '10%', eveningRain: '10%', isSunday: true },
         { day: 'တနင်္လာ', date: '၁.၂၆.', morningIcon: '☀️', eveningIcon: '☀️', low: '-၈', high: '-၂', morningRain: '20%', eveningRain: '20%' },
-        { day: 'အင်္ဂါ', date: '၁.၂၂.', morningIcon: '☀️', eveningIcon: '☀️', low: '-၂၃', high: '-၄', morningRain: '0%', eveningRain: '0%' },
-        { day: 'ဗုဒ္ဓဟူး', date: '၁.၂၃.', morningIcon: '☀️', eveningIcon: '⛅', low: '-၂၀', high: '-၁', morningRain: '10%', eveningRain: '20%' },
+        { day: 'အင်္ဂါ', date: '၁.၂၂.', morningIcon: '☀️', eveningIcon: '☀️', low: '-၂', high: '-၄', morningRain: '0%', eveningRain: '0%' },
+        { day: 'ဗုဒ္ဓဟူး', date: '၁.၂၃.', morningIcon: '☀️', eveningIcon: '⛅', low: '-၂', high: '-၁', morningRain: '10%', eveningRain: '20%' },
     ];
 
     const [isExpanded, setIsExpanded] = useState(false);
@@ -32,9 +32,9 @@ const WeeklyForecast = () => {
             {/* --- WEB VIEW --- */}
             <div className="hidden sm:block relative">
                   <h3 className="text-[17px] font-bold text-slate-900 mb-3">အပတ်စဉ်ခန့်မှန်းချက်</h3>
-                <div className="grid grid-cols-2 gap-2 mb-4">
+                <div className="grid grid-cols-2 gap-4 mb-4">
                     {weeklyData.slice(0, 2).map((data, idx) => (
-                        <div key={idx} className="flex items-center justify-between p-4 border border-[#eee] rounded-  [12px] shadow-sm bg-white">
+                        <div key={idx} className="flex items-center justify-between p-4 border border-[#00000076] rounded-[12px] shadow-sm  bg-white">
                             <div className="flex flex-col">
                                 <span className="text-[15px] font-bold leading-tight">{data.day}</span>
                                 <span className="text-[12px] text-gray-400">{data.date}</span>
@@ -50,7 +50,7 @@ const WeeklyForecast = () => {
                                 </div>
                             </div>
                             <div className="text-right">
-                                <p className="text-[10px] text-gray-400 mb-1">အနိမ့် / အမြင့်</p>
+                                <p className="text-[15px] text-gray-400 mb-1">အနိမ့် / အမြင့်</p>
                                 <p className="font-bold text-[16px]">
                                     <span className="text-[#4a89f3]">{data.low}°</span> <span className="text-gray-200 mx-0.5 font-normal">/</span> <span className="text-[#f14343]">{data.high}°</span>
                                 </p>
@@ -123,7 +123,7 @@ const WeeklyForecast = () => {
             </div>
 
             {/* Footer Text */}
-            <div className="mt-6 pt-4 border-t border-[#f8f8f8] hidden sm:block text-[11px] text-gray-400 leading-relaxed">
+            <div className="mt-4 pt-4 border-[#f8f8f8] hidden sm:block text-[15px] text-gray-400 leading-relaxed">
                 မိုးလေဝသခန့်မှန်းချက်များကို အချိန်နှင့်တပြေးညီ ပြောင်းလဲနိုင်ပါသည်။ အသေးစိတ်ကို ဆက်လက်ကြည့်ရှုရန်...
                 <button className="text-[#4a89f3] font-bold ml-1 hover:underline">ပိုမိုသိရှိရန် ❯</button>
             </div>

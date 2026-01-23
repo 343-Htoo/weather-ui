@@ -17,13 +17,13 @@ const TemperatureToggleCard = () => {
       
       {/* Header Labels */}
       <div className="mb-8 flex justify-between items-center px-2">
-        <span className={`px-3 py-1 rounded-full text-[10px] font-bold border transition-all duration-500 ${
+        <span className={`px-3 py-1 md:ml-35 rounded-full text-[10px] font-bold border transition-all duration-500 ${
           activeDay === 'today' ? 'bg-white text-slate-900 border-slate-200' : 'text-slate-400 border-transparent opacity-50 md:opacity-100 md:border-slate-100'
         }`}>
           လက်ရှိ 01.17
         </span>
         
-        <span className={`px-3 py-1 rounded-full text-[10px] font-bold border transition-all duration-500 ${
+        <span className={`px-3 py-1 rounded-full md:mr-40 text-[10px] font-bold border transition-all duration-500 ${
           activeDay === 'tomorrow' ? 'bg-white text-slate-900 border-slate-200' : 'text-slate-400 border-transparent opacity-50 md:opacity-100 md:border-slate-100'
         }`}>
           မနက်ဖြန် 01.18
@@ -41,7 +41,7 @@ const TemperatureToggleCard = () => {
         >
           <div className="flex items-center">
             <span className={`font-black text-slate-900 tracking-tighter transition-all duration-700 ${
-              activeDay === 'today' ? 'text-6xl md:text-8xl' : 'text-2xl md:text-8xl'
+              activeDay === 'today' ? 'text-6xl md:text-7xl md:ml-30' : 'text-2xl md:text-8xl'
             }`}>2.4°</span>
             <span className={`ml-2 transition-all duration-700 ${
               activeDay === 'today' ? 'text-4xl md:text-6xl' : 'text-xl md:text-6xl'
@@ -50,8 +50,8 @@ const TemperatureToggleCard = () => {
           <div className={`mt-2 transition-all duration-700 ${
             activeDay === 'today' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 md:opacity-100 md:translate-y-0'
           }`}>
-            <p className="text-sm md:text-lg font-bold text-slate-700 leading-tight">ကြည်လင်သည်</p>
-            <p className="text-[10px] md:text-xs text-skyblue-400 italic mt-1"> -5° / 2°</p>
+            <p className="text-sm md:text-lg md:ml-30 font-bold text-slate-700 leading-tight">ကြည်လင်သည်</p>
+            <p className="text-[10px] md:text-xs md:ml-30 text-skyblue-400 italic mt-1"> -5° / 2°</p>
           </div>
         </div>
 
@@ -64,7 +64,7 @@ const TemperatureToggleCard = () => {
                   ? (activeDay === 'today' ? '65%' : '35%') 
                   : '' 
           }}
-        >
+        > 
          
           <div className="h-full border-l border-gray-300"></div>
           
@@ -73,7 +73,7 @@ const TemperatureToggleCard = () => {
             className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white border border-slate-200 shadow-xl rounded-full p-2.5 active:scale-90 transition-all duration-500 hover:border-slate-300 md:hidden"
           >
             <svg 
-              // xmlns="http://www.w3.org/2000/svg" 
+              xmlns="http://www.w3.org/2000/svg" 
               className={`h-2 w-2 text-slate-600 transition-transform duration-700 ${
                 activeDay === 'tomorrow' ? 'rotate-180' : ''
               }`} 
@@ -91,19 +91,19 @@ const TemperatureToggleCard = () => {
             activeDay === 'tomorrow' ? 'w-[80%] md:w-1/2 opacity-100' : 'w-[20%] md:w-1/2 opacity-30 grayscale md:grayscale-0 md:opacity-100'
           }`}
         >
-          <div className="flex items-center">
+          <div className="flex items-center md:mr-30">
              <span className={`transition-all duration-700 ${
-              activeDay === 'tomorrow' ? 'text-3xl md:text-5xl mr-2' : 'text-lg md:text-5xl mr-0'
+              activeDay === 'tomorrow' ? 'text-3xl md:text-5xl md:mr-30 ' : 'text-lg md:text-5xl  mr-0'
             }`}>☀️</span>
             <span className={`font-black text-slate-900 tracking-tighter transition-all duration-700 ${
-              activeDay === 'tomorrow' ? 'text-5xl md:text-7xl' : 'text-xl md:text-4xl'
+              activeDay === 'tomorrow' ? 'text-5xl md:text-7xl md:mr-25' : 'text-xl md:text-7xl'
             }`}>-4°/4°</span>
           </div>
           <div className={`mt-2 transition-all duration-700 ${
             activeDay === 'tomorrow' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 md:opacity-100 md:translate-y-0'
           }`}>
-            <p className="text-sm md:text-lg font-bold text-slate-700 leading-tight">ကြည်လင်သည်</p>
-            <p className="text-[10px] md:text-xs text-blue-500 font-bold mt-2">☔ 10% / 30%</p>
+            <p className="text-sm mr-4 md:text-lg md:mr-40 font-bold text-slate-700 leading-tight">ကြည်လင်သည်</p>
+            <p className="text-[10px] mr-4 md:text-xs md:mr-40 text-blue-500 font-bold mt-2">☔ 10% / 30%</p>
           </div>
         </div>
 

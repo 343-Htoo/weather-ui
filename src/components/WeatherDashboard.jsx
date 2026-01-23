@@ -240,10 +240,10 @@ const WeatherDashboard = () => {
               <span className={`text-sm font-bold ${d.isPrev ? 'text-slate-300' : (i % 7 === 0 ? 'text-red-500' : i % 7 === 6 ? 'text-blue-600' : 'text-slate-800')}`}>{d.date}</span>
               <span className="text-xl">🌧️</span>
               <div className="flex flex-col items-center leading-none">
-                <span className="text-red-500 text-[12px] font-bold">{d.high}°</span>
-                <span className="text-blue-600 text-[12px] font-bold mt-0.5">{d.low}°</span>
+                <span className="text-red-500 mt-2 text-[15px] font-bold">{d.high}°</span>
+                <span className="text-blue-600 mt-2 text-[15px] font-bold">{d.low}°</span>
               </div>
-              <span className="text-blue-300 text-[10px] font-medium">{d.rain}</span>
+              <span className="text-blue-300 text-[13px] font-medium">{d.rain}</span>
             </div>
           ))}
         </div>
