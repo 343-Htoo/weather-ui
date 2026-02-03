@@ -27,7 +27,7 @@ const WeeklyForecast = () => {
     };
 
     return (
-        <div className="max-w-[750px] mx-auto bg-white p-4 font-sans text-[#333]">
+        <div className="max-w-[930px] mx-auto bg-white p-4 md:p-0 md:pt-3 md:mr-30  font-sans text-[#333]">
 
             {/* --- WEB VIEW --- */}
             <div className="hidden sm:block relative">
@@ -59,7 +59,7 @@ const WeeklyForecast = () => {
                     ))}
                 </div>
 
-                <div className="group relative">
+                <div className="group relative md:ml-6">
                     <button onClick={() => scroll('left')} className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-8 h-8 bg-white border border-gray-100 rounded-full shadow-md flex items-center justify-center hover:bg-gray-50 opacity-0 group-hover:opacity-100 transition-all text-gray-400">❮</button>
 
                     <div ref={scrollRef} className="flex overflow-x-auto scrollbar-hide gap-0 border-t border-[#f8f8f8] pt-6 pb-2">

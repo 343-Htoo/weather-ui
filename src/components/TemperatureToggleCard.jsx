@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import LocationToolbar from './LocationToolbar';
 
@@ -13,10 +12,10 @@ const TemperatureToggleCard = () => {
   return (
     <div>
       <LocationToolbar/>
-      <div className="bg-white p-5 md:p-8 mb-8  overflow-hidden relative transition-all duration-700 ease-in-out">   
+      <div className="bg-white p-5 md:p-8  overflow-hidden relative transition-all duration-700 ease-in-out">   
       
       {/* Header Labels */}
-      <div className="mb-8 flex justify-between items-center px-2">
+      <div className=" flex justify-between items-center px-2">
         <span className={`px-3 py-1 md:ml-35 rounded-full text-[10px] font-bold border transition-all duration-500 ${
           activeDay === 'today' ? 'bg-white text-slate-900 border-slate-200' : 'text-slate-400 border-transparent opacity-50 md:opacity-100 md:border-slate-100'
         }`}>
@@ -108,8 +107,6 @@ const TemperatureToggleCard = () => {
         </div>
 
       </div>
-
-      
     </div>
     </div>
   );

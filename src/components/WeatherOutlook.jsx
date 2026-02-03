@@ -7,7 +7,7 @@ const WeatherOutlook = () => {
   const weeks = ['Jan W5', 'Feb W1', 'Feb W2', 'Feb W3'];
 
   return (
-    <div className="max-w-2xl mx-auto p-3 font-sans">
+    <div className="max-w-2xl md:ml-8 mx-auto p-3 font-sans">
       <h2 className="text-xl font-bold mb-6 text-slate-800">Weather Outlook</h2>
 
       {/* Main Tabs (Weekly / Monthly) */}

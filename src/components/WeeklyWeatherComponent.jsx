@@ -52,7 +52,7 @@ const WeeklyWeatherComponent = () => {
       `}</style>
 
       {/* --- Health Index Section (Compact) --- */}
-      <div className="bg-white rounded-[1.2rem] p-3 md:p-6  relative group overflow-hidden">
+      <div className="bg-white rounded-[1.2rem] p-3 md:mr-10 md:p-2  relative group overflow-hidden">
         <h3 className="text-[13px] md:text-lg font-bold mb-4 text-slate-800 ml-1">လူနေမှုဘဝ အညွှန်းကိန်း</h3>
         
         {/* Left Arrow (sm) */}
@@ -72,7 +72,7 @@ const WeeklyWeatherComponent = () => {
         >
           <div className="flex flex-nowrap items-start space-x-3 md:space-x-10 min-w-max px-4">
             {healthIndexes.map((item, idx) => (
-              <div key={idx} className="flex flex-col items-center space-y-2 w-14 md:w-28 shrink-0">
+              <div key={idx} className="flex flex-col items-center space-y-2 w-14 md:w-23 shrink-0">
                 <StatusFace type={item.face} colorClass={item.color} />
                 <div className="text-center w-full">
                   <p className={`text-[9px] md:text-xs font-black ${item.color} leading-none truncate uppercase`}>
